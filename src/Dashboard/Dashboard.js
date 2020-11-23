@@ -1,6 +1,6 @@
 import React from "react";
 import { getUser, removeUserSession } from "../Utils/Common";
-import "./index.css";
+import "../index.css";
 import { Button, Grid } from "@material-ui/core";
 
 function Dashboard(props) {
@@ -18,8 +18,18 @@ function Dashboard(props) {
       <br />
       <input type="button" onClick={handleLogout} value="Logout" />
       <Grid container>
-        <Grid item xs={12} md={12} lg={12}>
-          <Button></Button>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          style={{ border: "2px solid black", marginTop: 20 }}
+        >
+          <h2 style={{ textAlign: "center" }}> Quiz Section</h2>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Button>Available quiz</Button>
+            <Button>Add Quiz</Button>
+          </div>
         </Grid>
       </Grid>
     </div>
