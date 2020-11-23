@@ -1,0 +1,49 @@
+.app {
+  width: 450px;
+  background-color: #fff9c4;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+}
+.app:hover {
+  box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.75);
+}
+.app:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 10;
+  width: 0;
+  bottom: 45px;
+  background: #000;
+  height: 10px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.app:hover:after,
+.app:focus:after,
+.app:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.inputFiled {
+  height: 30px;
+  border-radius: 3px;
+}
+.inputFiled:hover {
+  border-color: black;
+  height: 30px;
+}
+
+.buttonHover:hover {
+  color: white;
+}
+
+.textToRight:hover {
+  margin-left: 5px;
+}
