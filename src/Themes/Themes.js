@@ -8,10 +8,7 @@ export const lightTheme = {
   loginCard: "#fff9c4",
   loginCardBg: "#fff9c4",
   //
-  QuizCard: "",
-  QuizCardBg: "#b2ebf2",
-  //
-  profileCardBg: "#ffd54f",
+  QuizListCard: "#26a69a",
 };
 export const darkTheme = {
   body: "#363537",
@@ -23,8 +20,5 @@ export const darkTheme = {
   loginCard: "",
   loginCardBg: "#263238",
   //
-  QuizCard: "",
-  QuizCardBg: "#263238",
-  //
-  profileCardBg: "#263238",
+  QuizListCard: "#263238",
 };

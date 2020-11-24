@@ -17,7 +17,7 @@ function Dashboard(props) {
       Welcome {user.name}!<br />
       <br />
       <input type="button" onClick={handleLogout} value="Logout" />
-      <Grid container>
+      <Grid container spacing={1}>
         <Grid
           item
           xs={12}
@@ -27,7 +27,26 @@ function Dashboard(props) {
         >
           <h2 style={{ textAlign: "center" }}> Quiz Section</h2>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Button>Available quiz</Button>
+            <a href="/quizlist">
+              <Button>Available quiz</Button>
+            </a>
+
+            <Button>Add Quiz</Button>
+          </div>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          style={{ border: "2px solid black", marginTop: 20 }}
+        >
+          <h2 style={{ textAlign: "center" }}> Quiz Section</h2>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <a href="/userlist">
+              <Button>Available quiz</Button>
+            </a>
+
             <Button>Add Quiz</Button>
           </div>
         </Grid>

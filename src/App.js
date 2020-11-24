@@ -14,6 +14,8 @@ import { getToken, removeUserSession, setUserSession } from "./Utils/Common";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles, Button } from "./Themes/globalStyles";
 import { lightTheme, darkTheme } from "./Themes/Themes";
+import QuizList from "./Quiz/QuizList";
+import UserList from "./Userlist/UserList";
 function App() {
   const [authLoading, setAuthLoading] = useState(true);
   const [theme, setTheme] = useState("light");
@@ -29,7 +31,7 @@ function App() {
 
     axios
       .get(
-        `https://login-auth-web-mini.herokuapp.com//verifyToken/admin?token=${token}`
+        `https://login-auth-web-mini.herokuapp.com/verifyToken/admin?token=${token}`
       )
       .then((response) => {
         setUserSession(response.data.token, response.data.user);
@@ -72,6 +74,8 @@ function App() {
               <Switch>
                 <PublicRoute exact path="/" component={Login} />
                 <PrivateRoute path="/dashboard" component={Dashboard} />
+                <PrivateRoute path="/quizlist" component={QuizList} />
+                <PrivateRoute path="/userlist" component={UserList} />
               </Switch>
             </div>
           </div>
