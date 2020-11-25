@@ -14,8 +14,19 @@ import { getToken, removeUserSession, setUserSession } from "./Utils/Common";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles, Button } from "./Themes/globalStyles";
 import { lightTheme, darkTheme } from "./Themes/Themes";
+//
 import QuizList from "./Quiz/QuizList";
+//
 import UserList from "./Userlist/UserList";
+import UserListAdd from "./Userlist/UserListAdd";
+//
+import UserData from "./Users/UsersData";
+import UserDataAdd from "./Users/UsersDataAdd";
+//
+import UserRequest from "./UserRequest/UserRequest";
+//
+import AppData from "./Dashboard/Appdata";
+
 function App() {
   const [authLoading, setAuthLoading] = useState(true);
   const [theme, setTheme] = useState("light");
@@ -44,7 +55,18 @@ function App() {
   }, []);
 
   if (authLoading && getToken()) {
-    return <div className="content">Checking Authentication...</div>;
+    return (
+      <div class="wrapper">
+        <span class="circle circle-1"></span>
+        <span class="circle circle-2"></span>
+        <span class="circle circle-3"></span>
+        <span class="circle circle-4"></span>
+        <span class="circle circle-5"></span>
+        <span class="circle circle-6"></span>
+        <span class="circle circle-7"></span>
+        <span class="circle circle-8"></span>
+      </div>
+    );
   }
 
   return (
@@ -76,6 +98,11 @@ function App() {
                 <PrivateRoute path="/dashboard" component={Dashboard} />
                 <PrivateRoute path="/quizlist" component={QuizList} />
                 <PrivateRoute path="/userlist" component={UserList} />
+                <PrivateRoute path="/userlistadd" component={UserListAdd} />
+                <PrivateRoute path="/usersdata" component={UserData} />
+                <PrivateRoute path="/usersdataadd" component={UserDataAdd} />
+                <PrivateRoute path="/userrequest" component={UserRequest} />
+                <PrivateRoute path="/appdata" component={AppData} />
               </Switch>
             </div>
           </div>

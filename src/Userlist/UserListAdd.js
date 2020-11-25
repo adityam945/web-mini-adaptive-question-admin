@@ -58,53 +58,6 @@ export default function MyComponent() {
           <a href="/">
             <ButtonDelete>Go Back!</ButtonDelete>
           </a>
-          {items.map((item) => (
-            <div key={item.id}>
-              <Grid
-                container
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                }}
-              >
-                <Grid xs={12} md={8} lg={8} className="cardUserList">
-                  <div>
-                    <div
-                      style={{
-                        borderBottom: "3px solid Black",
-                        paddingBottom: 10,
-                      }}
-                    >
-                      Deletion action cannot be reverted{" =>"}
-                      <ButtonDelete onClick={() => userListDelete(item._id)}>
-                        Delete Entry
-                      </ButtonDelete>
-                    </div>
-
-                    <p style={{ textAlign: "center" }}>
-                      Username: {item.username}{" "}
-                    </p>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <div>
-                        <p>Section 1: {item.section1} </p>
-                        <p>Section 1 Difficulty: {item.section1Difficulty} </p>
-                      </div>
-                      <div>
-                        <p>Section 1: {item.section1} </p>
-                        <p>Section 1 Difficulty: {item.section1Difficulty} </p>
-                      </div>
-                    </div>
-                  </div>
-                </Grid>
-              </Grid>{" "}
-            </div>
-          ))}
         </div>
       </UserListCard>
     );

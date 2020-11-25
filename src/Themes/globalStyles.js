@@ -68,6 +68,15 @@ export const UserListCard = styled.div`
     padding: 10px;
     margin-top: 30px;
   }
+  .cardUserAddList {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+    height: 100%;
+    background-color: ${({ theme }) => theme.QuizListCard};
+    padding: 10px;
+    margin-top: 30px;
+  }
 
   .cardQuizList:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);

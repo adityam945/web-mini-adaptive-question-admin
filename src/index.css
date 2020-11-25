@@ -37,3 +37,78 @@ code {
 .header .active {
   color: #ffa726;
 }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fcdc29;
+  border-radius: 50%;
+  animation: loading 1.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
+  transform-origin: bottom center;
+  position: relative;
+}
+@keyframes loading {
+  0% {
+    transform: translateY(0px);
+    background-color: #fcdc29;
+  }
+  50% {
+    transform: translateY(50px);
+    background-color: #ef584a;
+  }
+  100% {
+    transform: translateY(0px);
+    background-color: #fcdc29;
+  }
+}
+.circle-1 {
+  animation-delay: 0.1s;
+}
+.circle-2 {
+  animation-delay: 0.2s;
+}
+.circle-3 {
+  animation-delay: 0.3s;
+}
+.circle-4 {
+  animation-delay: 0.4s;
+}
+.circle-5 {
+  animation-delay: 0.5s;
+}
+.circle-6 {
+  animation-delay: 0.6s;
+}
+.circle-7 {
+  animation-delay: 0.7s;
+}
+.circle-8 {
+  animation-delay: 0.8s;
+}
+/* 
+
+
+
+ */
+.buttonLogOut {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 145x;
+  letter-spacing: 1px;
+  position: relative;
+  background-color: #f44336;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  transition-duration: 0.4s;
+  border-radius: 4px;
+  margin-left: 30px;
+}

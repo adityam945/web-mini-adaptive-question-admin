@@ -63,11 +63,25 @@ export default function MyComponent() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return (
+      <div class="wrapper">
+        <span class="circle circle-1"></span>
+        <span class="circle circle-2"></span>
+        <span class="circle circle-3"></span>
+        <span class="circle circle-4"></span>
+        <span class="circle circle-5"></span>
+        <span class="circle circle-6"></span>
+        <span class="circle circle-7"></span>
+        <span class="circle circle-8"></span>
+      </div>
+    );
   } else {
     return (
       <QuizListCard>
         <div>
+          <a href="/">
+            <ButtonDelete>Go Back!</ButtonDelete>
+          </a>
           {items.map((item) => (
             <div key={item.id}>
               <Grid container>

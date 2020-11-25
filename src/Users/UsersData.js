@@ -9,24 +9,24 @@ export default function MyComponent() {
 
   function userListDelete(id) {
     if (window.confirm("Are you Sure of this Action")) {
-      fetch(`https://adaptive-question-api.herokuapp.com/userdata/` + id, {
+      fetch(`https://adaptive-question-api.herokuapp.com/usersList/` + id, {
         method: "DELETE",
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json;charset=utf-8",
         },
       });
-      window.location = "/userlist";
+      window.location = "/usersdata";
     }
   }
 
   useEffect(() => {
-    fetch("https://adaptive-question-api.herokuapp.com/userdata/")
+    fetch("https://adaptive-question-api.herokuapp.com/usersList/")
       .then((res) => res.json())
       .then(
         (result) => {
           setIsLoaded(true);
-          setItems(result.UserData);
+          setItems(result.Users);
         },
 
         (error) => {
@@ -83,23 +83,11 @@ export default function MyComponent() {
                     </div>
 
                     <p style={{ textAlign: "center" }}>
-                      Username: {item.username}{" "}
+                      Name of User: {item.name} <br />
+                      Username of User: {item.username}
+                      <br />
+                      Contact of User: {item.contact}
                     </p>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <div>
-                        <p>Section 1: {item.section1} </p>
-                        <p>Section 1 Difficulty: {item.section1Difficulty} </p>
-                      </div>
-                      <div>
-                        <p>Section 1: {item.section1} </p>
-                        <p>Section 1 Difficulty: {item.section1Difficulty} </p>
-                      </div>
-                    </div>
                   </div>
                 </Grid>
               </Grid>{" "}
